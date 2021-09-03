@@ -42,7 +42,10 @@ stages:
       workingDirectory: $(rootFolder)
       displayName: 'Use PHP version $(phpVersion)'
 
-    - script: composer install --no-interaction --prefer-dist
+    - script: | curl -sS https://getcomposer.org/installer | php
+      php composer.phar install --no-dev --optimize-autoloader
+      php composer.phar dump-env %APP_ENV%
+      php bin/console cache:clear
       workingDirectory: $(rootFolder)
       displayName: 'Composer install'
 
