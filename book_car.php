@@ -176,6 +176,7 @@
 			Copyright &copy; <?php echo date("Y")?> All Rights Reserved | Designed by Felix Kiamba.
 		</div>
 	</footer><!--  end footer  -->
+	<!--  end listing section  -->
 	
 </body>
 </html>
